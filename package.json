@@ -1,0 +1,48 @@
+{
+  "name": "@clxrity/xc",
+  "version": "0.6.6",
+  "packageManager": "bun@1.1.36",
+  "description": "An experimental cross-compiling language built with TypeScript. The goal is to design an interpreted and compiled language that can be used to write code for multiple platforms.",
+  "main": "dist/index.js",
+  "type": "module",
+  "private": false,
+  "bin": {
+    "xc": "dist/index.js"
+  },
+  "scripts": {
+    "build": "bun tsc",
+    "start": "bun run ./dist/index.js",
+    "dev": "bun run ./src/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist",
+    "deploy": "bun clean && bun run build && npm publish",
+    "test": "bun test __tests__/index.test.ts"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "keywords": [
+    "xc",
+    "language",
+    "compiler",
+    "typescript",
+    "javascript",
+    "node",
+    "cli",
+    "cross-compiler",
+    "transpiler",
+    "language"
+  ],
+  "author": {
+    "name": "MJ Anglin",
+    "email": "contact@mjanglin.com",
+    "url": "https://mjanglin.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.9.2",
+    "bun": "^1.1.36",
+    "typescript": "^5.7.2"
+  }
+}
